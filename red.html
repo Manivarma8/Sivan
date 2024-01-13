@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    background : linear-gradient(rgb(113, 20, 20),rgb(33, 145, 165));
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height : 100vh;
+}
+.act{
+    border : 1px solid red;
+    color : red;
+}
+div{
+    background-color : black;
+    width : 500px;
+    height : 400px;
+    border-radius: 20px;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    color: aliceblue;
+}
+#content{
+   
+    font-size: 29px;
+}
+button{
+    width : 20%;
+    height : 29px;
+    margin-top: 20px;
+    background-color : rgb(188, 188, 223);
+    color: rgb(6, 7, 7);
+    border-radius: 6px;
+}
+
+
+label{
+font-weight: bold;
+font-size: 20px;
+
+}
+span{
+    display: flex;
+    margin-top: 20px;
+    margin-right: 300px;
+    justify-content: center;
+}
+.user{
+    margin-right: 350px;
+}
+
+.sub{
+    margin-right: 380px;
+}
+
+.Boy{
+    margin-right: 350px;
+}
+#input{
+    width : 150px;
+    height : 70px;
+    text-align: center;
+    font-size: 25px;
+    margin-top : 100px;
+}
+#total{
+    margin-left: 300px;
+    width: 200%;
+    background-color: transparent;
+    }
+</style>
+
+<body>
+
+<div>
+    <h1 for="" style = "top : 0;margin-top:30px;position:  absolute;" >Temperature Convension</h1>
+
+<input type="number" id= "input">
+<div id = "total">
+    
+<span style="display: flex">
+<input type="radio" id = "circle_1" name = "one">
+<label for=""> Celsius  «—»  Fahrenheit</label>
+</span>
+
+<span style="display: flex;">
+<input id = circle_2 type="radio" name = "one">
+<label for=""> Fahrenheit  «—»  Celsius</label>
+</span>
+</div>
+<h1 id = "result">Your Temp is </h1>
+
+
+</div>
+</body>
+<script>
+var input = document.getElementById('input')
+var input_1 = document.getElementById('circle_1')
+var input_2 = document.getElementById('circle_2')
+var result = document.getElementById('result')
+
+ input_1.addEventListener("input", celsius)
+ input_2.addEventListener("input", fahrenheit)
+
+   function celsius(){
+        var num_1 =Number(input.value)
+    var value_1 = (num_1 * 9/5) + 32;
+result.textContent = `Your Temp is ${value_1.toFixed(2) } ℃`
+    }
+
+function fahrenheit(){
+var num_2 = Number(input.value)
+var value_2 = (num_2 - 32) * 5/9;
+result.textContent = `Your Temp is ${value_2.toFixed(2) } ℉`
+}
+
+</script>
+
+</html>
+
+
